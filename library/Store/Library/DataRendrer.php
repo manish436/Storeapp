@@ -1,20 +1,22 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * All the classes which resists inside Library Store folder is customer library class,
+ *  which is used for application requirments only.
  */
 
 /**
- * Description of DataRendrer
+ * DataRendrer class used for displaying data beautifuly.
  *
- * @author Manik
+ * @author Manish Gour
  */
 class Store_Library_DataRendrer {
 
     public function displayData($allData) {
         /*
+         * @return void
+         * it display below format.
+         *  
          * <id> <name> (<quantity>)
           - <category 1>
           - <category 2>
@@ -30,14 +32,22 @@ class Store_Library_DataRendrer {
 
          */
         print "\n";
-        foreach ($allData as $value) {
-            print $value[0] . " " . $value[1] . " " . $value[2] . "\n";
-            $category = explode(";", $value[3]);
-            foreach ($category as $eachCategory) {
-                print " - " . $eachCategory . "\n";
+        if (!empty($allData)) {
+            foreach ($allData as $value) {
+                print $value[0] . " " . $value[1] . " " . $value[2] . "\n";
+                $category = explode(";", $value[3]);
+                if (!empty($category)) {
+                    foreach ($category as $eachCategory) {
+                        if ($eachCategory != "")
+                            print " - " . $eachCategory . "\n";
+                    }
+                }
+                print "\n";
             }
-            print "\n";
+        } else {
+            print "No results found.\n";
         }
+        print "\n";
     }
 
 }

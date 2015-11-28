@@ -1,15 +1,14 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * All the classes which resists inside Library Store folder is customer library class,
+ *  which is used for application requirments only.
  */
 
 /**
- * Description of CommonFunctions
+ * Utility class used for some utlities, data extraction, data filter and date time etc..
  *
- * @author Manik
+ * @author Manish Gour
  */
 class Store_Library_Utility_CommonFunctions {
 

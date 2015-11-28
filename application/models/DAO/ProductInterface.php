@@ -1,14 +1,14 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This interface is used to set a guidline for other classes, 
+ * so that data type and parametrs will be same for all type of data source files.
  */
 
 /**
+ * ProductInterface is used set a guidline for other classes, 
  *
- * @author Manik
+ * @author Manish Gour
  */
 interface Application_Model_DAO_ProductInterface {
 

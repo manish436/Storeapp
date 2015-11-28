@@ -1,15 +1,14 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * It is a simple DTO class we can also call it an Etity of a bean class, 
+ * it is used in passing data in objects rather then raw values.
  */
 
 /**
- * Description of Product
+ * Product Entity, DTO or Bean class to represent a realworld object
  *
- * @author Manik
+ * @author Manish Gour
  */
 class Application_Model_DTO_Product {
 

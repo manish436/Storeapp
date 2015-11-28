@@ -1,15 +1,13 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This Class used to return object of DAO class 
+ * In future if we need any other data source like database of Mysql Oracle, in that case we just need to give a type to this class
  */
 
 /**
- * Description of ProductDAOFactory
- *
- * @author Manik
+ * ProductDAOFactory : This Class used to return object of DAO class 
+ * @author Manish Gour
  */
 class Application_Model_DAO_ProductDAOFactory {
 
@@ -18,11 +16,11 @@ class Application_Model_DAO_ProductDAOFactory {
      * @return Application_Model_DAO_ProductCSV
      * @return Application_Model_DAO_ProductNL
      */
-    public static function getProductDAO($type) {
+    public static function getProductDAO($type, $fileName = null) {
         if ($type == "CSV") {
-            return new Application_Model_DAO_ProductCSV();
+            return new Application_Model_DAO_ProductCSV($fileName);
         } else if ($type == "NL") {
-            return new Application_Model_DAO_ProductNL();
+            return new Application_Model_DAO_ProductNL($fileName);
         }
     }
 

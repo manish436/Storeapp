@@ -1,17 +1,20 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class is used for fetch data from CSV file, it is a DAO file
+ * similar to the file which we use to execute sql queries for crud operation.
  */
 
 /**
- * Description of ProductCSV
+ * ProductCSV is used to fetch data from CSV
  *
- * @author Manik
+ * @author Manish Gour
  */
 class Application_Model_DAO_ProductCSV extends Store_Library_CSV_Reader implements Application_Model_DAO_ProductInterface {
+
+    public function __construct($fileName) {
+        parent::__construct($fileName);
+    }
 
     public function findAll() {
         return $this->fetchAllCSVData();

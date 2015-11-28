@@ -3,17 +3,20 @@
 require_once 'DataRendrer.php';
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * All the classes which resists inside Library Store folder is customer library class,
+ * which is used for application requirments only.
  */
 
 /**
- * Description of DataRendrerInstance
- *
- * @author Manik
+ * DataRendrerInstance class used only for calling DataRendrer class
+ * so that we do not need to creat object of this many times.
+ * 
+ * @author Manish Gour
  */
 class Store_Library_DataRendrerInstance {
+    /*
+     * @return void 
+     */
 
     public static function displayData($data) {
         $dataRendrerObject = new Store_Library_DataRendrer();
